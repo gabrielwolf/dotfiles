@@ -25,29 +25,29 @@ alias freefilesync='sudo /Applications/FreeFileSync.app/Contents/MacOS/FreeFileS
 alias bfg='java -jar ~/Downloads/Web/bfg-1.12.8.jar'
 
 # Web
-alias nginx.start='sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.nginx.plist'
-alias nginx.stop='sudo launchctl unload /Library/LaunchDaemons/homebrew.mxcl.nginx.plist'
-alias nginx.restart='nginx.stop && nginx.start'
-alias nginx_modsite='~/Downloads/Tools/nginx_modsite'
-alias php-fpm.start="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php70.plist"
-alias php-fpm.stop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php70.plist"
-alias php-fpm.restart='php-fpm.stop && php-fpm.start'
-alias mysql.start="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
-alias mysql.stop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
-alias mysql.restart='mysql.stop && mysql.start'
-alias nginx.logs.error='tail -250f /usr/local/etc/nginx/logs/error.log'
-alias nginx.logs.access='tail -250f /usr/local/etc/nginx/logs/access.log'
-alias nginx.logs.default.access='tail -250f /usr/local/etc/nginx/logs/default.access.log'
-alias nginx.logs.default-ssl.access='tail -250f /usr/local/etc/nginx/logs/default-ssl.access.log'
-alias nginx.logs.phpmyadmin.error='tail -250f /usr/local/etc/nginx/logs/phpmyadmin.error.log'
-alias nginx.logs.phpmyadmin.access='tail -250f /usr/local/etc/nginx/logs/phpmyadmin.access.log'
+#alias nginx.start='sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.nginx.plist'
+#alias nginx.stop='sudo launchctl unload /Library/LaunchDaemons/homebrew.mxcl.nginx.plist'
+#alias nginx.restart='nginx.stop && nginx.start'
+#alias nginx_modsite='~/Downloads/Tools/nginx_modsite'
+#alias php-fpm.start="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php70.plist"
+#alias php-fpm.stop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php70.plist"
+#alias php-fpm.restart='php-fpm.stop && php-fpm.start'
+#alias mysql.start="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
+#alias mysql.stop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
+#alias mysql.restart='mysql.stop && mysql.start'
+#alias nginx.logs.error='tail -250f /usr/local/etc/nginx/logs/error.log'
+#alias nginx.logs.access='tail -250f /usr/local/etc/nginx/logs/access.log'
+#alias nginx.logs.default.access='tail -250f /usr/local/etc/nginx/logs/default.access.log'
+#alias nginx.logs.default-ssl.access='tail -250f /usr/local/etc/nginx/logs/default-ssl.access.log'
+#alias nginx.logs.phpmyadmin.error='tail -250f /usr/local/etc/nginx/logs/phpmyadmin.error.log'
+#alias nginx.logs.phpmyadmin.access='tail -250f /usr/local/etc/nginx/logs/phpmyadmin.access.log'
 
 # Path
-export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:/usr/local/bin:$HOME/Downloads/Tools/:$PATH"
 export PATH="$HOME/.npm/bin:$HOME/.npm-global/bin:/usr/local/Cellar/mariadb/10.1.21/bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
 export PATH="/Applications/Umlet:$PATH"
-export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
+#export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
 export PATH="$MAGICK_HOME/bin:$PATH"
 
 # Gitprompt configuration
@@ -77,13 +77,13 @@ if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
 fi
 
 source ~/Downloads/Tools/wp-cli/wp-completion.bash
-source /usr/local/opt/nvm/nvm.sh
+#source /usr/local/opt/nvm/nvm.sh
 
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Librry/CoreServices/Finder.app'
 alias rmds_store='find . -name '*.DS_Store' -type f -delete'
 
-PHP_AUTOCONF=/usr/local/bin/autoconf
+#PHP_AUTOCONF=/usr/local/bin/autoconf
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
