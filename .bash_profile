@@ -1,6 +1,8 @@
 # Bash
 export CLICOLOR=1
 export LSCOLORS=cxfxcxdxbxegedabagacad
+export HISTSIZE=2000
+export HISTFILESIZE=2000
 
 # my prompt in the form of user@computer-name:~/foo/bar]$
 PS1='\[\033[1;32m\]\u\[\033[1;33m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;36m\]]\[\033[1;31m\]\\$\[\033[0m\] ' 
@@ -17,6 +19,8 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../'
 
 # Software
+alias yb='yarn run build'
+alias ys='yarn run start'
 alias subl='open -a Sublime\ Text.app'
 alias p='python'
 alias p3='python3.5'
