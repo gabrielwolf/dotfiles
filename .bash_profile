@@ -53,6 +53,7 @@ export PATH="./node_modules/.bin:$PATH"
 export PATH="/Applications/Umlet:$PATH"
 export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
 export PATH="$MAGICK_HOME/bin:$PATH"
+export PATH="~/Downloads/Tools:$PATH"
 
 # Gitprompt configuration
 if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
