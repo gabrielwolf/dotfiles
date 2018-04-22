@@ -5,7 +5,7 @@ export HISTSIZE=2000
 export HISTFILESIZE=2000
 
 # my prompt in the form of user@computer-name:~/foo/bar]$
-PS1='\[\033[1;32m\]\u\[\033[1;33m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;36m\]]\[\033[1;31m\]\\$\[\033[0m\] ' 
+PS1='\[\033[1;32m\]\u\[\033[1;33m\]@\[\033[1;32m\]\h \[\033[1;35m\]\w\[\033[1;36m \]\[\033[1;31m\]\\$\[\033[0m\] ' 
 
 # Handy aliases
 alias ll="ls -lvhAa"
