@@ -1,9 +1,11 @@
 # Bash
 export CLICOLOR=1
 export LSCOLORS=cxfxcxdxbxegedabagacad
+export HISTSIZE=2000
+export HISTFILESIZE=2000
 
-# my prompt in the form of user@computer-name:~/foo/bar]$
-PS1='\[\033[1;32m\]\u\[\033[1;33m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;36m\]]\[\033[1;31m\]\\$\[\033[0m\] ' 
+# my prompt in the form of user@computer-name ~/foo/bar $
+PS1='\[\033[1;32m\]\u\[\033[1;33m\]@\[\033[1;32m\]\h \[\033[1;35m\]\w\[\033[1;36m \]\[\033[1;31m\]\\$\[\033[0m\] ' 
 
 # Handy aliases
 alias ll="ls -lvhAa"
@@ -17,12 +19,12 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../'
 
 # Software
+alias yb='yarn run build'
+alias ys='yarn run start'
 alias subl='open -a Sublime\ Text.app'
 alias p='python'
-alias p3='python3.5'
 alias updatedb='sudo /usr/libexec/locate.updatedb'
 alias freefilesync='sudo /Applications/FreeFileSync.app/Contents/MacOS/FreeFileSync'
-alias bfg='java -jar ~/Downloads/Web/bfg-1.12.8.jar'
 
 # Web
 #alias nginx.start='sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.nginx.plist'
@@ -43,12 +45,10 @@ alias bfg='java -jar ~/Downloads/Web/bfg-1.12.8.jar'
 #alias nginx.logs.phpmyadmin.access='tail -250f /usr/local/etc/nginx/logs/phpmyadmin.access.log'
 
 # Path
-export PATH="/usr/local/sbin:/usr/local/bin:$HOME/Downloads/Tools/:$PATH"
-export PATH="$HOME/.npm/bin:$HOME/.npm-global/bin:/usr/local/Cellar/mariadb/10.1.21/bin:$PATH"
-export PATH="./node_modules/.bin:$PATH"
-export PATH="/Applications/Umlet:$PATH"
-#export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
-export PATH="$MAGICK_HOME/bin:$PATH"
+export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
+#export PATH="./node_modules/.bin:$PATH"
+#export PATH="~/Downloads/Tools:$PATH"
+export PATH="~/.composer/vendor/bin:$PATH"
 
 # Gitprompt configuration
 if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
@@ -76,14 +76,14 @@ if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
   source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
 fi
 
-source ~/Downloads/Tools/wp-cli/wp-completion.bash
+#source ~/Downloads/Tools/wp-cli/wp-completion.bash
 #source /usr/local/opt/nvm/nvm.sh
 
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Librry/CoreServices/Finder.app'
-alias rmds_store='find . -name '*.DS_Store' -type f -delete'
+#alias rmds_store='find . -name '*.DS_Store' -type f -delete'
 
-#PHP_AUTOCONF=/usr/local/bin/autoconf
+PHP_AUTOCONF=/usr/local/bin/autoconf
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
